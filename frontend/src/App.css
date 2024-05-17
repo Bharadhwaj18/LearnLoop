@@ -2,6 +2,10 @@ html {
   scroll-snap-type: y mandatory;
 }
 
+
+
+/*  */
+
 .app {
   height: 100vh;
   background-color: black;
@@ -11,22 +15,173 @@ html {
 
 .app_videos {
   position: relative;
-  height: 700px;
+  height: 95vh;
   border-radius: 20px;
   overflow: scroll;
-  width: 80%;
-  max-width: 500px;
+  width: 60vw;
+  max-width: 480px;
   scroll-snap-type: y mandatory;
 }
+
+
+
 
 /* Hide the scrollbar for chrome */
 .app_videos::-webkit-scrollbar {
   display: none;
 }
 
+
+
+
 /* For edge */
 
 .app_videos {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+
+
+/* Upload Button */
+
+.uploadButton {
+  padding: 1.5% 4%;
+  font-size: medium;
+  border-radius: 20px;
+  right: 50px;
+  top: 30px;
+  position: absolute;
+  color: aliceblue;
+  background-color: cornflowerblue;
+  cursor: pointer;
+}
+
+
+
+/* Form */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 80vh;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding:5% 10%;
+  border: 1px solid #888;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* .formValue {
+  margin: 0 30px;
+}
+
+.formKeys{
+  font-size: medium;
+  font-weight: bolder;
+  padding: 20px 0;
+}
+
+.formlabels {
+  margin-bottom: 2%;
+}
+.formSubmit {
+  padding: 1% 4%;
+  font-size: medium;
+  border-radius: 10px;
+  right: -50%;
+  top: 30px;
+  position: relative;
+  color: aliceblue;
+  background-color: grey;
+  cursor: pointer;
+} */
+
+.uploadtoCloud {
+  padding: 1% 4%;
+  font-size: medium;
+  border-radius: 10px;
+  right: -0%;
+  top: 30px;
+  color: aliceblue;
+  background-color: grey;
+  cursor: pointer;
+
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form div {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+form label {
+  margin-bottom: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.formButtons {
+  display: flex;
+  flex-direction: row;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: grey;
+  font-size: medium;
+  color: white;
+  border: none;
+  margin: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+form button:hover {
+  background-color: black;
 }

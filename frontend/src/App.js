@@ -1,11 +1,11 @@
-import Video from "./Video"
-import './App.css';
+import Video from "./Video";
+import "./App.css";
 import axios from "./axios";
-import React , {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
+import UploadWidget from "./UploadWidget";
 
-function App({ url , likes, shares, messages, heading, description, songName }) {
-
-  const [videos , setVideos] = useState([]);
+function App({ url, likes, shares, messages, heading, description, songName }) {
+  const [videos, setVideos] = useState([]);
 
   useEffect(() => {
     async function fetchPosts() {
@@ -16,35 +16,36 @@ function App({ url , likes, shares, messages, heading, description, songName }) 
     }
 
     fetchPosts();
-
   }, []);
 
-  console.log(videos);
-
-
-
-
-
-
-
+  // console.log(videos);
 
   return (
     <div className="app">
-    <div className="app_videos">
-    {videos.map(
-        ({ url , likes, shares, messages, heading, description, songName }) => (
-        <Video
-          url = {url}
-          heading = {heading}
-          songName = {songName}
-          likes = {likes}
-          messages={messages}
-          description={description}
-          shares={shares}
-        />
-
-      ))}
-    </div>
+      <UploadWidget />
+      <div className="app_videos">
+        {videos.map(
+          ({
+            url,
+            likes,
+            shares,
+            messages,
+            heading,
+            description,
+            songName,
+          }) => (
+            <Video
+              url={url}
+              heading={heading}
+              songName={songName}
+              likes={likes}
+              messages={messages}
+              description={description}
+              shares={shares}
+            />
+          )
+        )}
+      </div>
     </div>
   );
 }
