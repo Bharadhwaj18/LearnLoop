@@ -17,7 +17,7 @@ Sooo lets discuss how to approach this porblem sometime soon
 -Adding Video url into the databse by running the video through a cloud server, This would allow faster retieval of data and alsoo help in lesser load on Mongo
 Cloudinary looks pretty promising 
 and it offers 25gb for free users
-Soo i think its really good
+Soo i think its really good - Task Completed
 
 
 - Scaling of the Video while uploading the video: Since the video needs to be scaled properly before entering the cloud server, We somehow need to figure out how to scale the video to a proper ratio and then run it into the server
