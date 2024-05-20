@@ -60,12 +60,12 @@ const UploadWidget = () => {
       function (error, result) {
         if (result && result.event === "success") {
           console.log("Upload Widget Result:", result.info);
-          setLink(result.info.url);
+          setLink(result.info.secure_url);
           console.log(link);
         }
       }
     );
-  }, []);
+  });
 
   const handleSubmit = async (e) => {
     // e.preventDefault();
